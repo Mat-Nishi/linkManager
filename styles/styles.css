@@ -5,8 +5,28 @@
     padding: 0;
 }
 
+:root{
+    --background-img: url(./assets/bg-mobile.jpg);
+    --text-color: white;
+    --btn-border-color: rgba(255,255,255,0.5);
+    --btn-border-color-hover: rgba(255,255,255,0.8);
+    --btn-bg-color: rgba(255,255,255,0.1);
+    --btn-bg-color-hover: rgba(255,255,255,0.05);
+    --icon-bg-color-hover: rgba(255,255,255,0.2);
+}
+/* Light mode styles */
+.light{
+    --background-img: url(./assets/bg-mobile-light.jpg);
+    --text-color: black;
+    --btn-border-color: rgba(0,0,0,0.5);
+    --btn-border-color-hover: rgba(0,0,0,0.8);
+    --btn-bg-color: rgba(0,0,0,0.05);
+    --btn-bg-color-hover: rgba(0,0,0,0.02);
+    --icon-bg-color-hover: rgba(0,0,0,0.1)
+}
+
 body{
-    background-image: url(./assets/bg-mobile.jpg);
+    background-image: var(--background-img);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -16,7 +36,7 @@ body{
 
 body *{
     font-family: "Inter", sans-serif;
-    color: #ffffff;
+    color: var(--text-color);
 }
 /* -------------------------- */
 
@@ -66,9 +86,9 @@ body *{
 
 #links ul li{
     width: 100%;
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid var(--btn-border-color);
     border-radius: 8px;
-    background: rgba(255,255,255,0.1);
+    background: var(--btn-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,8 +97,8 @@ body *{
 
 #links ul li:hover { 
     transform: scale(1.05);
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.8);
+    background: var(--btn-bg-color-hover);
+    border: 1px solid var(--btn-border-color-hover);
     }
 
 #links ul li a{
@@ -111,6 +131,6 @@ body *{
 }
 #socials a:hover{
     transform: scale(1.2);
-    background: rgba(255,255,255,0.2);
+    background: var(--icon-bg-color-hover);
 
 }
