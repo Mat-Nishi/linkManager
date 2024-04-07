@@ -7,6 +7,7 @@
 
 :root{
     --background-img: url(./assets/bg-mobile.jpg);
+    --light-mode-switch-img: url(assets/MoonStars.svg);
     --text-color: white;
     --btn-border-color: rgba(255,255,255,0.5);
     --btn-border-color-hover: rgba(255,255,255,0.8);
@@ -17,6 +18,7 @@
 /* Light mode styles */
 .light{
     --background-img: url(./assets/bg-mobile-light.jpg);
+    --light-mode-switch-img: url(assets/Sun.svg);
     --text-color: black;
     --btn-border-color: rgba(0,0,0,0.5);
     --btn-border-color-hover: rgba(0,0,0,0.8);
@@ -82,6 +84,7 @@ body *{
     align-items: center;
     justify-content: center;
     gap: 8px;
+    padding: 24px 0;
 }
 
 #links ul li{
@@ -117,7 +120,6 @@ body *{
     justify-content: center;
     gap: 24px;
     padding: 24px 0;
-    margin-top: 24px;
     font-size: 28px;
 }
 
@@ -133,4 +135,38 @@ body *{
     transform: scale(1.2);
     background: var(--icon-bg-color-hover);
 
+}
+
+/* Styles for the light mode switch */
+
+#lightmode_switch{
+    position: relative;
+
+}
+
+#lightmode_switch button{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 32px;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    background-image: var(--light-mode-switch-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+}
+
+#lightmode_switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--btn-bg-color);
+    border: 1px solid var(--btn-border-color);
+    border-radius: 9999px;
+}
+
+.light #lightmode_switch button{
+    transform: translate(100%, -50%);
 }
