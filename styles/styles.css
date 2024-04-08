@@ -49,11 +49,12 @@ body *{
     flex-direction: column;
     align-items: center;
     height: 712px;
-    width: 360px;
+    width: 100%;
     margin-top: 56px;
 }
 #container section{
-    width: 312px;
+    width: 100%;
+    max-width: 540px;
 }
 
 /* Styles for the profile section */
@@ -84,7 +85,7 @@ body *{
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 24px 0;
+    padding: 24px 24px;
 }
 
 #links ul li{
